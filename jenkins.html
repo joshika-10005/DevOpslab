@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jenkins CI/CD Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+header{
+    background:#ff5722;
+    padding:20px;
+    text-align:center;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(8px);
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#ffd54f;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#ff9800;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#ff5722;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    background:#111;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+🚀 Jenkins Continuous Integration & Continuous Deployment
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Source Code</h2>
+<p>Developers push code to GitHub. Jenkins automatically detects new commits.</p>
+<button onclick="showMessage('GitHub Repository Connected Successfully!')">GitHub</button>
+</div>
+
+<div class="card">
+<h2>Build</h2>
+<p>Jenkins compiles and builds the project automatically whenever code changes.</p>
+<button onclick="showMessage('Build Completed Successfully!')">Build</button>
+</div>
+
+<div class="card">
+<h2>Test</h2>
+<p>Automated tests ensure the application works correctly before deployment.</p>
+<button onclick="showMessage('All Tests Passed!')">Run Tests</button>
+</div>
+
+<div class="card">
+<h2>Deploy</h2>
+<p>After successful testing, Jenkins deploys the application to the target server.</p>
+<button onclick="showMessage('Deployment Successful!')">Deploy</button>
+</div>
+
+</div>
+
+<footer>
+© 2026 Jenkins CI/CD Demo | HTML • CSS • JavaScript
+</footer>
+
+<script>
+function showMessage(message){
+    alert(message);
+}
+</script>
+
+</body>
+</html>
